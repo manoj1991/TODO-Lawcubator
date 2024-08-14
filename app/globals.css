@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+/* styles/globals.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #22c1c3 5%, #ecf7d1 100%);
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  display: block;
+}
+
+.header{
+  background-color: #f7797d;
+  color: white;
+  cursor: default;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  background-color: white;
+  color: #544c4b;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+}
+
+input[type="text"] {
+  margin-right: 0px;
+  background-color: #fbd786;
+  border: 2px solid rgba(0, 0, 0, 0);
+  font-size: 1.2rem;
+  padding: 10px 0;
+  height: 100%;
+  text-indent: 20px;
+  font-family: 'Comfortaa', cursive;
+  width: 100%;
+}
+
+input:focus {
+  background-color: #f7e9c0;
+  overflow: hidden;
+  padding: 10px 0;
+  outline: none;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+span {
+  flex: 1;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbd786;
+  padding: 5px;
+}
+
+
+
+.input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.button {
+  border: none;
+  background-color: #f7e9c0;
+  color: #000;
+  padding: 8px 16px;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 21px;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f7e9c0;
+}
+
+.todo-item {
+  position: relative;
+  padding: 20px;
+  overflow: hidden; 
+  border-bottom-left-radius: 8px; 
+  border-bottom-right-radius: 8px; 
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: -100px; /* Start off-screen */
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0; /* Make the buttons invisible initially */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.todo-item:hover .todo-buttons {
+  transform: translateY(-50%) translateX(-100px); /* Slide into view */
+  opacity: 1; /* Make the buttons visible */
+}
+
+.todo-buttons button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px;
+  color: #544c4b;
+  transition: color 0.3s ease;
+}
+
+.todo-buttons button:hover {
+  color: #544c4b;
+}
+
+.todo-container{
+  border-radius: 30%;
+  box-shadow: 16px 16px 23px #808080;
+  width: 100%;
+}
+
+.header{
+  border-top-left-radius: 8px; 
+  border-top-right-radius: 8px; 
+}
+
+.max-w-5xl {
+  max-width: 30%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
